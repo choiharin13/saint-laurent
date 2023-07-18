@@ -3,11 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>서브타이틀 | 프로젝트 이름</title>
-    <meta
-      name="description"
-      content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요"
-    />
+    <title>Saint Laurent</title>
+    <meta name="description" content="saint laurent" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="페이지 제목" />
     <meta property="og:description" content="페이지 설명" />
@@ -35,6 +32,9 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link
       rel="stylesheet"
@@ -57,29 +57,63 @@
     </div>
     <div class="wrap">
       <header id="header" class="container">
+        <!-- inner -->
         <div class="inner">
-          <h1 id="logo">
-            <a href="#">logo</a>
-          </h1>
-          <div class="util">
+          <!-- util-1 -->
+          <div class="util-1">
             <ul class="lst-util">
               <li>
-                <!-- a : 링크 연결 / button : 동작처리 -->
+                <!-- a : 링크 연결 / button : 동작 처리  -->
                 <button class="btn-g btn-search">
                   <span class="blind">검색</span>
                 </button>
               </li>
+            </ul>
+          </div>
+          <!-- Logo -->
+          <h1 id="logo">
+            <a href="#">
+              <img src="./images/logo-white.png" alt="logo" />
+            </a>
+          </h1>
+          <!-- util-2 -->
+          <div class="util-2">
+            <ul class="lst-util2">
               <li>
-                <button class="btn-g btn-burger">
+                <button class="btn-g btn-ham">
                   <span class="blind">마이페이지</span>
                 </button>
               </li>
             </ul>
           </div>
         </div>
+        <!-- <nav id="gnb">nav</nav> -->
       </header>
-      <div class="slide-wrap slide-name">slide</div>
+
+      <!-- slide -->
+
+      <div class="slide-wrap slide-name">
+        <!-- video -->
+        <div class="video-main">
+          <video muted autoplay loop>
+            <source src="./videos/saint laurent main.mp4" type="video/mp4" />
+            <strong>Your browser does not support the video tag.</strong>
+          </video>
+        </div>
+        <!-- 로고 애니메이션 -->
+        <div class="logo-ani"></div>
+        <div class="main-img">
+          <img
+            src="./images/main-img-blur.png"
+            alt="saint laurent mens summer 2024"
+          />
+        </div>
+      </div>
+
+      <!-- main -->
       <main id="main" class="container">컨텐츠</main>
+
+      <!-- footer -->
       <footer id="footer" class="container">풋터</footer>
     </div>
   </body>

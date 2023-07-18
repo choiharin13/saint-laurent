@@ -1,5 +1,5 @@
 @charset "UFT-8";
-@import "mixin", "variables", "fonts", "reset", "main", "contents";
+@import "fonts", "reset", "main", "contents";
 
 // comm.scss -
 // 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
@@ -9,32 +9,77 @@
   padding: 0 4%;
 }
 
-// header
+.wrap {
+  background-color: #000;
+}
+
+// 헤더
 #header {
-  border-bottom: 1px solid #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  #logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 21px;
+    object-fit: contain;
+  }
+
   .inner {
+    // position: fixed;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     height: 70px;
   }
+  .btn-g {
+    height: 40px;
+    width: 70px;
+    &::before {
+      font-size: 20px;
+      font-family: "Font Awesome 6 free";
+    }
+  }
   .lst-util {
-    display: flex;
-    .btn-g {
-      width: 40px;
-      height: 70px;
-      &::before {
-        font-size: 20px;
-        font-family: "Font Awesome 6 Free";
-      }
-    }
     .btn-search::before {
-      content: "\f002";
+      content: "\f0c9";
+      font-family: "Font Awesome 6 free";
       font-weight: 900;
+      padding: 5px;
+      color: white;
     }
-    .btn-burger::before {
+  }
+  .lst-util2 {
+    .btn-ham::before {
       content: "\f007";
-      font-weight: 400;
+      font-family: "Font Awesome 6 free";
+      font-weight: 500;
+      padding: 5px;
+      color: white;
     }
+  }
+}
+
+// slide
+
+.slide-wrap {
+  .video-main video {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .logo-ani {
+    width: 100%;
+    height: 337px;
+  }
+
+  .main-img img {
+    width: 100%;
+    height: 700px;
   }
 }
