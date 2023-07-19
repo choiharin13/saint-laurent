@@ -1,28 +1,33 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Poppins";
+  font-family: "Roboto";
   font-weight: 300;
-  src: url(../font/Poppins-Light.woff) format("woff");
+  src: url(../fonts/Roboto-Light.woff) format("woff");
 }
 @font-face {
-  font-family: "Poppins";
+  font-family: "Roboto";
   font-weight: 400;
-  src: url(../fonts/Poppins-Regular.woff) format("woff");
+  src: url(../fonts/Roboto-Regular.woff) format("woff");
 }
 @font-face {
-  font-family: "Poppins";
+  font-family: "Roboto";
   font-weight: 500;
-  src: url(../fonts/Poppins-Medium.woff) format("woff");
+  src: url(../fonts/Roboto-Medium.woff) format("woff");
 }
 @font-face {
-  font-family: "Poppins";
-  font-weight: 600;
-  src: url(../fonts/Poppins-SemiBold.woff) format("woff");
-}
-@font-face {
-  font-family: "Poppins";
+  font-family: "Roboto";
   font-weight: 700;
-  src: url(../fonts/Poppins-Bold.woff) format("woff");
+  src: url(../fonts/Roboto-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  src: url(../fonts/LibreBaskerville-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  src: url(../fonts/LibreBaskerville-Bold.woff) format("woff");
 }
 /* reset */
 body,
@@ -292,31 +297,106 @@ legend {
   padding: 0 4%;
 }
 
+.wrap {
+  background-color: #000;
+}
+
+.slide-wrap section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.slide-wrap .video-main {
+  display: block;
+}
+.slide-wrap .video-main video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slide-wrap .logo-ani {
+  width: 100%;
+  height: 337px;
+}
+.slide-wrap .main-img {
+  width: 100%;
+  height: auto;
+}
+
+.sec-main {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+.sec-main .sec-collec-1 {
+  width: 100%;
+}
+.sec-main .sec-collec-2 {
+  width: 100%;
+}
+.sec-main .sec-collec-3 {
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .sec-collec div {
+    flex-direction: column;
+    width: 100%;
+  }
+  .sec-collec img {
+    height: auto;
+    width: 100%;
+  }
+}
 #header {
-  border-bottom: 1px solid #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#header #logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 21px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #header .inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   height: 70px;
 }
-#header .lst-util {
-  display: flex;
+#header .btn-g {
+  height: 40px;
+  width: 70px;
 }
-#header .lst-util .btn-g {
-  width: 40px;
-  height: 70px;
-}
-#header .lst-util .btn-g::before {
+#header .btn-g::before {
   font-size: 20px;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 free";
 }
 #header .lst-util .btn-search::before {
-  content: "\f002";
+  content: "\f0c9";
+  font-family: "Font Awesome 6 free";
   font-weight: 900;
+  padding: 5px;
+  color: white;
 }
-#header .lst-util .btn-burger::before {
+#header .lst-util2 .btn-ham::before {
   content: "\f007";
-  font-weight: 400;
+  font-family: "Font Awesome 6 free";
+  font-weight: 500;
+  padding: 5px;
+  color: white;
 }/*# sourceMappingURL=comm.css.map */
