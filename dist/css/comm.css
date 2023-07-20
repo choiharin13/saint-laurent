@@ -324,39 +324,49 @@ legend {
 }
 .slide-wrap .logo-ani {
   width: 100%;
-  height: 337px;
 }
-.slide-wrap .main-img {
+.slide-wrap .main-collec {
+  line-height: 0;
+}
+.slide-wrap .main-collec .main-img {
   width: 100%;
   height: auto;
+  line-height: 0;
 }
 
 .sec-main {
+  box-sizing: border-box;
+  width: 100%;
+}
+.sec-main .sec-collec {
   display: flex;
+  flex-direction: column;
+  line-height: 0;
+}
+.sec-main .sec-collec div {
   width: 100%;
   height: auto;
-  padding: 0;
 }
-.sec-main .sec-collec-1 {
+.sec-main .sec-collec img {
+  width: 100%;
+  height: 100%;
+}
+.sec-main .sec-img-slide {
+  display: flex;
+  box-sizing: border-box;
   width: 100%;
 }
-.sec-main .sec-collec-2 {
+.sec-main .sec-img-slide .div {
   width: 100%;
+  height: 500px;
 }
-.sec-main .sec-collec-3 {
+.sec-main .sec-img-slide img {
   width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-@media screen and (max-width: 1200px) {
-  .sec-collec div {
-    flex-direction: column;
-    width: 100%;
-  }
-  .sec-collec img {
-    height: auto;
-    width: 100%;
-  }
-}
 #header {
   position: fixed;
   top: 0;
@@ -399,4 +409,39 @@ legend {
   font-weight: 500;
   padding: 5px;
   color: white;
+}
+
+.ocean {
+  overflow: hidden;
+  width: 100%;
+  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  margin-bottom: 40px;
+  padding: 0 0;
+  height: 50px;
+  top: 50%;
+  margin-top: 80px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.wave {
+  background: url(../../images/contents/saintlaurent-logo-slide-white.png) repeat-x;
+  position: absolute;
+  z-index: 100;
+  top: 13px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 20s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
 }/*# sourceMappingURL=comm.css.map */
