@@ -377,6 +377,54 @@ legend {
      object-fit: cover;
 }
 
+#main .nonelogo {
+  /*YOUTUBE VIDEO*/
+}
+#main .nonelogo .youtube {
+  position: relative;
+  height: 700px;
+  background-color: #211f1f;
+  overflow: hidden;
+}
+#main .nonelogo .youtube .youtube__area {
+  width: 1920px;
+  position: absolute;
+  /* 16비율 */
+  left: 50%;
+  margin-left: -960px;
+  /* 9비율 */
+  top: 50%;
+  margin-top: -540px;
+}
+#main .nonelogo .youtube .youtube__area::before {
+  content: "";
+  display: block;
+  /* 16:9 영상 비율로 요소 크기 만들기! */
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+}
+#main .nonelogo .youtube .youtube__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#main .nonelogo #player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#main section .img-main-full {
+  padding-top: 70px;
+}
+#main section .img-main-full img {
+  width: 100%;
+  margin-bottom: 70px;
+}
 #main section .img-wrap .img-list {
   display: flex;
   justify-content: center;
@@ -461,6 +509,9 @@ legend {
   justify-content: space-between;
   width: 100%;
   border-bottom: 1px solid #ffffff;
+}
+#footer .lst-foot > li:last-child {
+  border-bottom: 1px solid #000;
 }
 #footer .lst-sns {
   display: flex;

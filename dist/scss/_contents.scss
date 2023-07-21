@@ -96,7 +96,62 @@
 // 메인
 
 #main {
+  .nonelogo {
+    /*YOUTUBE VIDEO*/
+    .youtube {
+      position: relative;
+      height: 700px;
+      background-color: #211f1f;
+      overflow: hidden;
+
+      .youtube__area {
+        width: 1920px;
+        position: absolute;
+
+        /* 16비율 */
+        left: 50%;
+        margin-left: calc(1920px / -2);
+
+        /* 9비율 */
+        top: 50%;
+        margin-top: calc(1920px * 9 / 16 / -2);
+
+        &::before {
+          content: "";
+          display: block;
+          /* 16:9 영상 비율로 요소 크기 만들기! */
+          width: 100%;
+          height: 0;
+          padding-top: 56.25%;
+        }
+      }
+
+      .youtube__cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    #player {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
   section {
+    // main-full image
+    .img-main-full {
+      padding-top: 70px;
+      img {
+        width: 100%;
+        margin-bottom: 70px;
+      }
+    }
     .img-wrap {
       .img-list {
         display: flex;

@@ -78,6 +78,9 @@
       width: 100%;
       border-bottom: 1px solid #ffffff;
     }
+    > li:last-child {
+      border-bottom: 1px solid #000;
+    }
   }
   .lst-sns {
     display: flex;
