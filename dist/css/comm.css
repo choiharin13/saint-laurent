@@ -293,7 +293,7 @@ legend {
   height: 300px;
 }
 
-.slide-wrap section {
+.collecion-slide-wrap section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -301,10 +301,10 @@ legend {
   height: 100vh;
   overflow: hidden;
 }
-.slide-wrap .video-main {
+.collecion-slide-wrap .collecion-video-main {
   display: block;
 }
-.slide-wrap .video-main video {
+.collecion-slide-wrap .collecion-video-main video {
   position: absolute;
   top: 0;
   left: 0;
@@ -314,28 +314,28 @@ legend {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.slide-wrap .logo-ani {
+.collecion-slide-wrap .logo-ani {
   width: 100%;
 }
-.slide-wrap .main-collec {
+.collecion-slide-wrap .collection-main-collec {
   line-height: 0;
 }
-.slide-wrap .main-collec .main-img {
+.collecion-slide-wrap .collection-main-collec .collection-main-img {
   width: 100%;
   height: auto;
   line-height: 0;
 }
-.slide-wrap .sec-slide-wrap .swiper {
+.collecion-slide-wrap .swiper-slide-wrap .swiper {
   width: 100%;
   height: 80%;
 }
-.slide-wrap .sec-slide-wrap .swiper-slide {
+.collecion-slide-wrap .swiper-slide-wrap .swiper-slide {
   background: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.slide-wrap .sec-slide-wrap .swiper-slide img {
+.collecion-slide-wrap .swiper-slide-wrap .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -343,50 +343,50 @@ legend {
      object-fit: contain;
 }
 
-.sec-main {
+.collection-sec-main {
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 50px;
 }
-.sec-main .sec-collec {
+.collection-sec-main .collection-sec-runway {
   display: flex;
   flex-direction: column;
   line-height: 0;
 }
-.sec-main .sec-collec div {
+.collection-sec-main .collection-sec-runway div {
   width: 100%;
   height: auto;
 }
-.sec-main .sec-collec img {
+.collection-sec-main .collection-sec-runway img {
   width: 100%;
   height: 100%;
 }
-.sec-main .sec-img-slide {
+.collection-sec-main .sec-img-slide {
   display: flex;
   box-sizing: border-box;
   width: 100%;
 }
-.sec-main .sec-img-slide .div {
+.collection-sec-main .sec-img-slide .div {
   width: 100%;
   height: 500px;
 }
-.sec-main .sec-img-slide img {
+.collection-sec-main .sec-img-slide img {
   width: 100%;
   height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-#main .nonelogo {
+.collection-mainsection .collection-fullver {
   /*YOUTUBE VIDEO*/
 }
-#main .nonelogo .youtube {
+.collection-mainsection .collection-fullver .collection-youtube {
   position: relative;
   height: 700px;
   background-color: #211f1f;
   overflow: hidden;
 }
-#main .nonelogo .youtube .youtube__area {
+.collection-mainsection .collection-fullver .collection-youtube .collection-youtube-area {
   width: 1920px;
   position: absolute;
   /* 16비율 */
@@ -396,7 +396,7 @@ legend {
   top: 50%;
   margin-top: -540px;
 }
-#main .nonelogo .youtube .youtube__area::before {
+.collection-mainsection .collection-fullver .collection-youtube .collection-youtube-area::before {
   content: "";
   display: block;
   /* 16:9 영상 비율로 요소 크기 만들기! */
@@ -404,43 +404,45 @@ legend {
   height: 0;
   padding-top: 56.25%;
 }
-#main .nonelogo .youtube .youtube__cover {
+.collection-mainsection .collection-fullver .collection-youtube .collection-youtube-cover {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-#main .nonelogo #player {
+.collection-mainsection .collection-fullver #player {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
-#main section .img-main-full {
+.collection-mainsection .collection-fullimg .collection-img-full {
   padding-top: 70px;
 }
-#main section .img-main-full img {
+.collection-mainsection .collection-fullimg .collection-img-full img {
   width: 100%;
   margin-bottom: 70px;
 }
-#main section .img-wrap .img-list {
+.collection-mainsection .collection-celab-wrap {
+  width: 100%;
+}
+.collection-mainsection .collection-celab-wrap .collection-celab-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
 }
-#main section .img-wrap .img-list li {
+.collection-mainsection .collection-celab-wrap .collection-celab-list li {
   width: 50%;
 }
-#main section .img-wrap .img-list li .list-box {
+.collection-mainsection .collection-celab-wrap .collection-celab-list li .collection-celab-list-box {
   position: relative;
   overflow: hidden;
   width: 100%;
-  border-radius: 4px;
 }
-#main section .img-wrap .img-list li img {
+.collection-mainsection .collection-celab-wrap .collection-celab-list li img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
