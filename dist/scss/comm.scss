@@ -1,20 +1,12 @@
-@charset "UFT-8";
-@import "variables", "fonts", "reset", "main", "contents";
+@charset "UTF-8";
+@import "variables", "fonts", "main", "contents", "reset";
 
-// comm.scss -
-// 공통요소 : 헤더, 풋터, 버튼, 아이콘, 박스
-
-// 공통
 .container {
   padding: 0 4%;
 }
-
 .wrap {
-  background-color: #000;
   padding-top: 70px;
 }
-
-// 헤더
 #header {
   position: fixed;
   top: 0;
@@ -22,17 +14,20 @@
   right: 0;
   z-index: 6000;
   .header-wrap {
-    position: relative;
     display: flex;
+    // position: fixed;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 1000;
     padding: 10px 0px;
+    border-bottom: 1px solid #eee;
     box-sizing: border-box;
+    background: $w;
 
     #logo {
       position: absolute;
@@ -82,7 +77,7 @@
     height: 100%;
     z-index: 1000;
     padding: 10px 0px;
-    // border-bottom: 1px solid #eeeeee00;
+    // border-bottom: 1px solid #eee;
     box-sizing: border-box;
 
     #logo {
@@ -91,6 +86,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      height: 70px;
+      display: flex;
+      align-items: center;
     }
 
     #logo img {
@@ -102,7 +100,7 @@
       // position: absolute;
       display: inline-block;
       font-size: 30px;
-      color: #fff;
+      color: $w;
     }
 
     .inner {
@@ -114,8 +112,9 @@
       width: 100%;
     }
     .btn-g {
-      height: 40px;
-      width: 70px;
+      display: flex;
+      height: 70px;
+      align-items: center;
       &::before {
         font-size: 20px;
         font-family: "Font Awesome 6 free";
@@ -123,7 +122,6 @@
     }
   }
 }
-// header-icon
 .gnb-wrap {
   .input-burger {
     position: absolute;
@@ -136,7 +134,7 @@
       // input이 선택됬을 때
       & + label {
         .bar {
-          background: #fff;
+          background: $w;
           &:nth-child(2) {
             transform: rotate(45deg) translate(4px, 4px);
           }
@@ -154,6 +152,7 @@
       }
     }
   }
+
   .label-burger {
     cursor: pointer;
     position: relative;
@@ -196,12 +195,14 @@
     // margin-left: 15px;
     // padding-left: 18%;
     transition: right 0.3s;
+    padding-left: 22.8%;
     .gnb-wrap {
       margin-left: 15%;
     }
     .gnb-logo img {
-      width: 250px;
+      width: 204.67px;
       margin-bottom: 70px;
+      padding-top: 6px;
       &::after {
         content: "";
         position: absolute;
@@ -218,73 +219,83 @@
       line-height: 30px;
     }
     a {
-      color: #fff;
+      color: $w;
     }
   }
 }
 
 // footer
-
 #footer {
   position: relative;
-  margin-bottom: 30px;
-
+  padding-bottom: 60px;
+  background: #000;
   .lst-foot {
-    > li {
+    li {
       display: flex;
       justify-content: space-between;
       width: 100%;
-      border-bottom: 1px solid #ffffff;
+      border-bottom: 1px solid $w;
+      .iconbox {
+        border-bottom: 1px solid $b;
+      }
     }
-    > li:last-child {
-      border-bottom: 1px solid #000;
+    li:last-child {
+      border-bottom: 1px solid $b;
     }
   }
   .lst-sns {
     display: flex;
+    margin-right: -20px;
     a {
       display: flex;
       align-items: center;
       margin: 5px;
     }
   }
-
-  .footerlogo {
-    padding: 20px 20px;
+  li {
+    position: relative;
+    padding: 5px;
+    color: $w;
+    align-items: center;
   }
-  .footerlogo img {
-    display: block;
-    margin: 0 auto;
-    width: 190px;
-    height: 20px;
-    flex-shrink: 0;
+  li:first-child {
+    position: relative;
+    padding: 5px;
+    color: $w;
   }
   .material-icons-outlined {
     position: absolute;
     display: inline-block;
+    margin-top: 4px;
     font-size: 0.9rem;
   }
-  .iconbox {
-    display: flex;
-    flex-direction: row-reverse;
-    margin-right: 10px;
-  }
-  .fp {
-    position: relative;
-    padding: 5px;
-  }
-  .footerbox {
-    position: relative;
-    padding: 5px;
-  }
 }
-
-// 로고 슬라이드 애니메이션
+.iconbox {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 10px;
+  color: $w;
+}
+.ocean {
+  padding: 20px 20px;
+}
+.ocean {
+  display: block;
+  margin: 0 auto;
+  width: 190px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.li:first-child {
+  position: relative;
+  padding: 5px;
+  color: $w;
+}
 .ocean {
   overflow: hidden;
   width: 100%;
-  border-bottom: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid $w;
+  border-top: 1px solid $w;
   margin-bottom: 40px;
   padding: 0 0;
   height: 50px;
@@ -294,9 +305,8 @@
   display: flex;
   align-items: center;
 }
-
 .wave {
-  background: url(../../images/contents/saintlaurent-logo-slide-white.png)
+  background: url(../../images/comm/white/saintlaurent-logo-slide-white.png)
     repeat-x;
   // background-size: auto 100%;
   position: absolute;
@@ -307,7 +317,6 @@
   animation: wave 20s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
   transform: translate3d(0, 0, 0);
 }
-
 @keyframes wave {
   0% {
     margin-left: 0;
