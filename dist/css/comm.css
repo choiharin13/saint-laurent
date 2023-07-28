@@ -29,6 +29,10 @@
   font-weight: 700;
   src: url(../fonts/LibreBaskerville-Bold.woff) format("woff");
 }
+.main {
+  height: 100px;
+}
+
 /* reset */
 body,
 div,
@@ -112,6 +116,7 @@ table {
 
 body {
   -webkit-text-size-adjust: none;
+  background: #000;
 }
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
@@ -140,11 +145,11 @@ input[type=search]::-webkit-search-cancel-button {
 /* 기본 폰트 설정 */
 /* mobile */
 body {
-  background: #000000;
+  background: #fff;
   font-size: 14px;
   line-height: 1.5;
-  font-family: "Roboto", "Libre Baskerville", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
-  color: #ffffff;
+  font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+  color: #111;
 }
 
 /* desktop */
@@ -155,7 +160,7 @@ body {
 }
 /* color값은 디자인가이드에 맞게사용 */
 a {
-  color: #ffffff;
+  color: #333;
   text-decoration: none;
 }
 a:active, a:hover {
@@ -283,10 +288,6 @@ legend {
   font-size: 0;
   clear: both;
   content: "";
-}
-
-.main {
-  height: 100px;
 }
 
 .contents {
@@ -449,12 +450,360 @@ legend {
      object-fit: cover;
 }
 
+.contents {
+  height: 300px;
+}
+
+#payment {
+  margin-top: 70px;
+  padding: 70px 0px 0;
+}
+#payment h3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+#payment .bd {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
+}
+#payment .orderinfo > p {
+  font-family: "Libre Baskerville", serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: 40px;
+}
+#payment .payment-form li {
+  margin-bottom: 30px;
+}
+#payment .payment-form li label {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+#payment .payment-form li input {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+  width: 80%;
+  height: 30px;
+  border-radius: 0%;
+  border: 1px solid #272727;
+}
+#payment .payment-form li input:focus {
+  outline: none;
+  border-radius: 0%;
+  border: 1px solid #000000;
+  background: #ebebeb;
+}
+#payment .payment-form li select {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  width: 80%;
+  height: 30px;
+  border-radius: 0%;
+  border: 1px solid #272727;
+  background: #fff;
+}
+#payment .payment-form li select:focus {
+  outline: none;
+  border-radius: 0%;
+  border: 1px solid #000000;
+  background: #ffffff;
+}
+#payment .payment-form li option {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+#payment .payment-form li p {
+  width: 100%;
+  color: #9a9a9a;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+#payment .payment-form li .payment-zip {
+  width: 30%;
+}
+#payment .payment-form li .payment-zipbutt {
+  margin-left: 10px;
+}
+#payment .payment-form li .payment-addressset {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 80%;
+  height: 30px;
+}
+#payment .payment-form li .payment-cellphonewrap {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+#payment .payment-form li .payment-cellphonewrap #cellphone {
+  width: 80px;
+}
+#payment .payment-form li .payment-cellphonewrap #cellphone2 {
+  width: 80px;
+}
+#payment .payment-form li .payment-cellphonewrap #cellphone3 {
+  width: 80px;
+}
+#payment .payment-form li #payment-email {
+  width: 30%;
+}
+#payment .payment-form li #payment-emailafter {
+  width: 30%;
+}
+#payment .payment-form li #payment-emailselect {
+  width: 85px;
+  font-size: 12px;
+}
+#payment .payment-caption {
+  margin-bottom: 70px;
+}
+#payment .payment-caption p {
+  width: 100%;
+  color: #000000;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+#payment .payment-payment {
+  display: flex;
+  flex-direction: column;
+}
+#payment .payment-payment .payment-wrap {
+  padding: 0 10%;
+  width: 100%;
+}
+#payment .payment-payment .payment-wrap ul {
+  margin-bottom: 15px;
+}
+#payment .payment-payment .payment-wrap ul li label {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+#payment .payment-payment .payment-wrap ul li label img {
+  width: 40px;
+  height: 40px;
+}
+#payment .payment-payment .payment-wrap ul li label p {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: left;
+}
+#payment .payment-payment .payment-wrap ul li label input {
+  margin-left: 100px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background: #ffffff;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+#payment .payment-payment .payment-wrap ul li label input:focus {
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+#payment .payment-payment .payment-card {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+#payment .payment-payment .payment-card .swiper {
+  width: 100%;
+  height: 100%;
+}
+#payment .payment-payment .payment-card .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#payment .payment-payment .payment-card .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#payment .payment-payment .payment-card .swiper-slide {
+  width: 80%;
+}
+#payment .payment-payment .payment-card .swiper-slide:nth-child(2) {
+  opacity: 70%;
+}
+#payment .payment-payment .payment-card .swiper-slide:nth-child(3) {
+  opacity: 70%;
+}
+#payment .payment-itemlist {
+  margin-bottom: 50px;
+}
+#payment .payment-itemlist .payment-wool {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+#payment .payment-itemlist .payment-wool h3 {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+#payment .payment-itemlist .payment-wool p {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#payment .payment-itemlist .payment-bottom-text p {
+  margin-left: 10px;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+#payment .payment-itemlist2 .payment-lambskin {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+#payment .payment-itemlist2 .payment-lambskin h3 {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+#payment .payment-itemlist2 .payment-lambskin p {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#payment .payment-itemlist2 .payment-bottom-text p {
+  margin-left: 10px;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+#payment .payment-totalpay {
+  padding-top: 10px;
+}
+#payment .payment-totalpay .payment-subtotal {
+  margin-bottom: 17px;
+  display: flex;
+  justify-content: space-between;
+}
+#payment .payment-totalpay .payment-subtotal h3 {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+#payment .payment-totalpay .payment-subtotal p {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#payment .payment-totalpay .payment-tax {
+  margin-bottom: 17px;
+  display: flex;
+  justify-content: space-between;
+}
+#payment .payment-totalpay .payment-tax h3 {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+#payment .payment-totalpay .payment-tax p {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#payment .payment-totalpay .payment-total {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+#payment .payment-totalpay .payment-total h3 {
+  font-family: "Roboto";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+#payment .payment-totalpay .payment-total p {
+  font-family: "Roboto";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+#payment .payment-totalpay .payment-paybutton {
+  width: 100%;
+}
+#payment .payment-totalpay .payment-paybutton button {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 52px;
+  background: #000;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
 .container {
   padding: 0 4%;
 }
 
 .wrap {
-  background-color: #000;
   padding-top: 70px;
 }
 
@@ -476,190 +825,9 @@ legend {
   height: 100%;
   z-index: 1000;
   padding: 10px 0px;
-  box-sizing: border-box;
-}
-#header .header-wrap #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 6000;
-}
-#header .header-wrap #header .header-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  padding: 10px 0px;
+  border-bottom: 1px solid #eee;
   box-sizing: border-box;
   background: #fff;
-}
-#header .header-wrap #header .header-wrap #logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#header .header-wrap #header .header-wrap #logo img {
-  height: 21px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-#header .header-wrap #header .header-wrap .material-symbols-outlined {
-  display: inline-block;
-  font-size: 30px;
-}
-#header .header-wrap #header .header-wrap .inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  width: 100%;
-}
-#header .header-wrap #header .header-wrap .btn-g {
-  height: 40px;
-  width: 70px;
-}
-#header .header-wrap #header .header-wrap .btn-g::before {
-  font-size: 20px;
-  font-family: "Font Awesome 6 free";
-}
-#header .header-wrap #header .header-wrap-b {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  padding: 10px 0px;
-  box-sizing: border-box;
-}
-#header .header-wrap #header .header-wrap-b #logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 70px;
-  display: flex;
-  align-items: center;
-}
-#header .header-wrap #header .header-wrap-b #logo img {
-  height: 21px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-#header .header-wrap #header .header-wrap-b .material-symbols-outlined {
-  display: inline-block;
-  font-size: 30px;
-  color: #fff;
-}
-#header .header-wrap #header .header-wrap-b .inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  width: 100%;
-}
-#header .header-wrap #header .header-wrap-b .btn-g {
-  display: flex;
-  height: 70px;
-  align-items: center;
-}
-#header .header-wrap #header .header-wrap-b .btn-g::before {
-  font-size: 20px;
-  font-family: "Font Awesome 6 free";
-}
-#header .header-wrap .gnb-wrap .input-burger {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
-#header .header-wrap .gnb-wrap .input-burger:checked + label .bar {
-  background: #fff;
-}
-#header .header-wrap .gnb-wrap .input-burger:checked + label .bar:nth-child(2) {
-  transform: rotate(45deg) translate(4px, 4px);
-}
-#header .header-wrap .gnb-wrap .input-burger:checked + label .bar:nth-child(3) {
-  opacity: 0;
-}
-#header .header-wrap .gnb-wrap .input-burger:checked + label .bar:nth-child(4) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-#header .header-wrap .gnb-wrap .input-burger:checked ~ #gnb {
-  left: 0;
-}
-#header .header-wrap .gnb-wrap .label-burger {
-  cursor: pointer;
-  position: relative;
-  z-index: 1100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 40px;
-  height: 70px;
-}
-#header .header-wrap .gnb-wrap .label-burger .bar {
-  display: block;
-  width: 26px;
-  height: 2px;
-  background: #fff;
-  transition: all 0.3s;
-}
-#header .header-wrap .gnb-wrap .label-burger span:nth-child(3) {
-  margin: 5px 0;
-}
-#header .header-wrap .gnb-wrap #gnb {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  bottom: 0;
-  width: 100%;
-  padding: 30px;
-  background: #000;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  transition: right 0.3s;
-  padding-left: 10.8%;
-}
-#header .header-wrap .gnb-wrap #gnb .gnb-wrap {
-  margin-left: 15%;
-}
-#header .header-wrap .gnb-wrap #gnb .gnb-logo img {
-  width: 204.67px;
-  height: 21px;
-  margin-bottom: 70px;
-  padding-top: 4px;
-}
-#header .header-wrap .gnb-wrap #gnb .gnb-logo img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-#header .header-wrap .gnb-wrap #gnb li {
-  color: #ffffff;
-  line-height: 30px;
-}
-#header .header-wrap .gnb-wrap #gnb a {
-  color: #fff;
 }
 #header .header-wrap #logo {
   position: absolute;
@@ -760,6 +928,18 @@ legend {
 .gnb-wrap .input-burger:checked + label .bar:nth-child(4) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
+.gnb-wrap .input-burger:checked + label .bar-w {
+  background: #fff;
+}
+.gnb-wrap .input-burger:checked + label .bar-w:nth-child(2) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.gnb-wrap .input-burger:checked + label .bar-w:nth-child(3) {
+  opacity: 0;
+}
+.gnb-wrap .input-burger:checked + label .bar-w:nth-child(4) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
 .gnb-wrap .input-burger:checked ~ #gnb {
   left: 0;
 }
@@ -779,6 +959,13 @@ legend {
   width: 26px;
   height: 2px;
   background: #fff;
+  transition: all 0.3s;
+}
+.gnb-wrap .label-burger .bar-w {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #000;
   transition: all 0.3s;
 }
 .gnb-wrap .label-burger span:nth-child(3) {
@@ -826,59 +1013,78 @@ legend {
 
 #footer {
   position: relative;
-  margin-bottom: 30px;
+  padding-bottom: 60px;
+  background: #000;
 }
-#footer .lst-foot > li {
+#footer .lst-foot li {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #fff;
 }
-#footer .lst-foot > li:last-child {
+#footer .lst-foot li .iconbox {
+  border-bottom: 1px solid #000;
+}
+#footer .lst-foot li:last-child {
   border-bottom: 1px solid #000;
 }
 #footer .lst-sns {
   display: flex;
+  margin-right: -20px;
 }
 #footer .lst-sns a {
   display: flex;
   align-items: center;
   margin: 5px;
 }
-#footer .footerlogo {
+#footer li {
+  position: relative;
+  padding: 5px;
+  color: #fff;
+  align-items: center;
+}
+#footer li:first-child {
+  position: relative;
+  padding: 5px;
+  color: #fff;
+}
+#footer .material-icons-outlined {
+  position: absolute;
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
+
+.iconbox {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.ocean {
   padding: 20px 20px;
 }
-#footer .footerlogo img {
+
+.ocean {
   display: block;
   margin: 0 auto;
   width: 190px;
   height: 20px;
   flex-shrink: 0;
 }
-#footer .material-icons-outlined {
-  position: absolute;
-  display: inline-block;
-  font-size: 0.9rem;
-}
-#footer .iconbox {
-  display: flex;
-  flex-direction: row-reverse;
-  margin-right: 10px;
-}
-#footer .fp {
+
+.li:first-child {
   position: relative;
   padding: 5px;
-}
-#footer .footerbox {
-  position: relative;
-  padding: 5px;
+  color: #fff;
 }
 
 .ocean {
   overflow: hidden;
   width: 100%;
-  border-bottom: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
   margin-bottom: 40px;
   padding: 0 0;
   height: 50px;

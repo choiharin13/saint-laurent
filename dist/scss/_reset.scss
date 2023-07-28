@@ -88,6 +88,7 @@ table {
 
 body {
   -webkit-text-size-adjust: none;
+  background: #000;
 }
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
@@ -130,12 +131,11 @@ input {
 /* mobile */
 
 body {
-  background: #000000;
+  background: #fff;
   font-size: 14px;
   line-height: 1.5;
-  font-family: "Roboto", "Libre Baskerville", "Noto Sans KR", "Malgun Gothic",
-    "맑은 고딕", sans-serif;
-  color: #ffffff;
+  font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+  color: #111;
 }
 
 /* desktop */
@@ -148,7 +148,7 @@ body {
 /* color값은 디자인가이드에 맞게사용 */
 
 a {
-  color: #ffffff;
+  color: #333;
   text-decoration: none;
 
   &:active,
@@ -289,3 +289,10 @@ legend {
     content: "";
   }
 }
+// body {
+//   background: url(../../images/m-main.jpg) no-repeat 0 0/ 100% auto;
+//   // background-size: 0 0 / 100% contain;
+//   .wrap {
+//     opacity: 0.7;
+//   }
+// }

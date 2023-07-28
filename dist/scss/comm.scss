@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "variables", "fonts", "main", "contents", "reset";
+@import "variables", "fonts", "main", "reset", "collection", "payment";
 
 .container {
   padding: 0 4%;
@@ -146,6 +146,19 @@
             transform: rotate(-45deg) translate(6px, -6px);
           }
         }
+        .bar-w {
+          background: $w;
+          &:nth-child(2) {
+            transform: rotate(45deg) translate(4px, 4px);
+          }
+          &:nth-child(3) {
+            // display: none;
+            opacity: 0;
+          }
+          &:nth-child(4) {
+            transform: rotate(-45deg) translate(6px, -6px);
+          }
+        }
       }
       & ~ #gnb {
         left: 0;
@@ -168,6 +181,15 @@
       width: 26px;
       height: 2px;
       background: $w;
+      transition: all 0.3s;
+      // display none, block은 트렌지션 적용x
+      // 2개 이상 적용시 all -> 위치값 다시 적용
+    }
+    .bar-w {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: $b;
       transition: all 0.3s;
       // display none, block은 트렌지션 적용x
       // 2개 이상 적용시 all -> 위치값 다시 적용
@@ -306,7 +328,7 @@
   align-items: center;
 }
 .wave {
-  background: url(../../images/comm/white/saintlaurent-logo-slide-white.png)
+  background: url(../../images/contents/saintlaurent-logo-slide-white.png)
     repeat-x;
   // background-size: auto 100%;
   position: absolute;
