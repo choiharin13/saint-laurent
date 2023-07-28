@@ -155,7 +155,7 @@ body {
 }
 /* color값은 디자인가이드에 맞게사용 */
 a {
-  color: #333;
+  color: #ffffff;
   text-decoration: none;
 }
 a:active, a:hover {
@@ -455,6 +455,7 @@ legend {
 
 .wrap {
   background-color: #000;
+  padding-top: 70px;
 }
 
 #header {
@@ -462,44 +463,176 @@ legend {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 6000;
 }
-#header #logo img {
+#header .header-wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  padding: 10px 0px;
+  box-sizing: border-box;
+}
+#header .header-wrap #logo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+#header .header-wrap #logo img {
   height: 21px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#header .inner {
+#header .header-wrap .material-symbols-outlined {
+  display: inline-block;
+  font-size: 30px;
+}
+#header .header-wrap .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  width: 100%;
 }
-#header .btn-g {
+#header .header-wrap .btn-g {
   height: 40px;
   width: 70px;
 }
-#header .btn-g::before {
+#header .header-wrap .btn-g::before {
   font-size: 20px;
   font-family: "Font Awesome 6 free";
 }
-#header .lst-util .btn-search::before {
-  content: "\f0c9";
-  font-family: "Font Awesome 6 free";
-  font-weight: 900;
-  padding: 5px;
-  color: white;
+#header .header-wrap-b {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  padding: 10px 0px;
+  box-sizing: border-box;
 }
-#header .lst-util2 .btn-ham::before {
-  content: "\f007";
+#header .header-wrap-b #logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#header .header-wrap-b #logo img {
+  height: 21px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#header .header-wrap-b .material-symbols-outlined {
+  display: inline-block;
+  font-size: 30px;
+  color: #fff;
+}
+#header .header-wrap-b .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+}
+#header .header-wrap-b .btn-g {
+  height: 40px;
+  width: 70px;
+}
+#header .header-wrap-b .btn-g::before {
+  font-size: 20px;
   font-family: "Font Awesome 6 free";
-  font-weight: 500;
-  padding: 5px;
-  color: white;
+}
+
+.gnb-wrap .input-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.gnb-wrap .input-burger:checked + label .bar {
+  background: #fff;
+}
+.gnb-wrap .input-burger:checked + label .bar:nth-child(2) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.gnb-wrap .input-burger:checked + label .bar:nth-child(3) {
+  opacity: 0;
+}
+.gnb-wrap .input-burger:checked + label .bar:nth-child(4) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+.gnb-wrap .input-burger:checked ~ #gnb {
+  left: 0;
+}
+.gnb-wrap .label-burger {
+  cursor: pointer;
+  position: relative;
+  z-index: 1100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40px;
+  height: 70px;
+}
+.gnb-wrap .label-burger .bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s;
+}
+.gnb-wrap .label-burger span:nth-child(3) {
+  margin: 5px 0;
+}
+.gnb-wrap #gnb {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  width: 100%;
+  padding: 30px;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: right 0.3s;
+}
+.gnb-wrap #gnb .gnb-wrap {
+  margin-left: 15%;
+}
+.gnb-wrap #gnb .gnb-logo img {
+  width: 250px;
+  margin-bottom: 70px;
+}
+.gnb-wrap #gnb .gnb-logo img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.gnb-wrap #gnb li {
+  color: #ffffff;
+  line-height: 30px;
+}
+.gnb-wrap #gnb a {
+  color: #fff;
 }
 
 #footer {
